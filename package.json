@@ -1,23 +1,56 @@
 {
   "name": "template-starter",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "@mdx-js/react": "^1.5.3",
+    "@newfrontdoor/audio-player": "^0.1.6",
+    "@react-google-maps/api": "^1.8.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@theme-ui/components": "^0.2.50",
+    "emotion-theming": "^10.0.27",
+    "ky": "^0.16.1",
+    "ky-universal": "^0.3.0",
+    "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "theme-ui": "^0.2.52"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "xo": {
+    "extends": [
+      "xo-react",
+      "plugin:jest/recommended"
+    ],
+    "parser": "babel-eslint",
+    "prettier": true,
+    "space": true,
+    "plugins": [
+      "emotion",
+      "jest"
+    ],
+    "rules": {
+      "emotion/jsx-import": "error",
+      "emotion/no-vanilla": "error",
+      "emotion/import-from-emotion": "error",
+      "emotion/styled-import": "error"
+    }
+  },
+  "eslint": {
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   },
   "browserslist": {
     "production": [
@@ -30,5 +63,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-xo-react": "^0.22.0",
+    "eslint-plugin-emotion": "^10.0.27",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "prettier": "^1.19.1",
+    "xo": "^0.25.3"
   }
 }

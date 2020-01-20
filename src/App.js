@@ -1,26 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {ThemeProvider} from 'theme-ui';
+import ky from 'ky-universal';
+import Main from './main';
+import theme from './theme';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    <ThemeProvider theme={theme}>
+      <Main />
+    </ThemeProvider>
 }
-
-export default App;
